@@ -10,27 +10,31 @@ export default function HeroSection() {
       aria-labelledby="hero-title"
       position="relative"
       width="full"
-      height="100svh"
-      alignItems="center"
-      justifyContent="center"
+      height={{lg: "100svh"}}
+      pt={{base: "120px", lg: "0px"}}
+      alignItems={{lg: "center"}}
+      justifyContent={{lg: "center"}}
     >
       <Image
         aria-hidden
         alt=""
         src={BigLogo.src}
         position="absolute"
-        pb="10%"
+        inset="0px"
+        m="auto"
+        mb={{base: "0px", lg: "auto"}}
+        pb={{lg: "10%"}}
         zIndex="-10"
       />
 
       <Text
         as="h1"
         id="hero-title"
-        fontSize="50px"
+        fontSize={{base: "36px", lg: "50px"}}
         fontWeight="700"
-        lineHeight="50px"
+        lineHeight={{base: "36px", lg: "50px"}}
         maxWidth="30ch"
-        textAlign="center"
+        textAlign={{lg: "center"}}
       >
         ¿Quieres automatizar tu negocio y no sabes a quién acudir?
       </Text>
@@ -39,7 +43,7 @@ export default function HeroSection() {
         fontSize="18px"
         lineHeight="28px"
         maxWidth="89ch"
-        textAlign="center"
+        textAlign={{lg: "center"}}
         mt="16px"
       >
         Somos la solución a tus necesidades. Tenemos las habilidades, el
@@ -48,7 +52,7 @@ export default function HeroSection() {
         necesidades. Con Nox no existen barreras contáctenos para poderle
         ayudar.
       </Text>
-      <Flex mt="32px">
+      <Flex mt={{base: "64px", lg: "32px"}} mb={{base: "90px", lg: "0px"}} mx="auto">
         <Button
           as={NextJsLink}
           py="24px"

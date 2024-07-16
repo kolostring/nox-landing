@@ -3,7 +3,7 @@ import HeroSection from "./HeroSection";
 
 export default function Home() {
   return (
-    <Box as="main">
+    <Box as="main" px="16px">
       <HeroSection />
     </Box>
   );
