@@ -67,6 +67,7 @@ export default function Navbar() {
             opacity: "1",
             animationPlayState: "running",
           },
+          shadow: "0px 20px 50px hsl(148, 90%, 0%, 20%), 0px 0px 10px hsl(88, 92%, 67%)",
         }}
         _active={{
           bgColor: "hsl(108, 82%, 67%)",
