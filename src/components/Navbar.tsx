@@ -73,6 +73,7 @@ export default function Navbar() {
       backdropBlur="4px"
       position="fixed"
       w="100%"
+      zIndex="100"
       transform={scrollPosition > scrollValueTrigger ? "auto" : "none"}
       translateY={`${-visibilityPercent.current}%`}
       transition="transform 300ms ease"
