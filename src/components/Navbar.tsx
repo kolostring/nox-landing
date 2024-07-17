@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <Box
       as="nav"
-      backgroundColor="hsl(0, 100%, 100%, 40%)"
+      backgroundColor={scrollPosition > 100 ? "hsl(0, 100%, 100%, 40%)" : "none"}
       backdropFilter={scrollPosition > 100 ? "auto" : "none"}
       backdropBlur="4px"
       position="fixed"

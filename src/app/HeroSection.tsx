@@ -1,6 +1,7 @@
 import { Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { default as NextJsLink } from "next/link";
 import BigLogo from "@/assets/big_logo.svg";
+import HeroAnimatedOrnaments from "./HeroAnimatedOrnaments";
 
 export default function HeroSection() {
   return (
@@ -10,31 +11,34 @@ export default function HeroSection() {
       aria-labelledby="hero-title"
       position="relative"
       width="full"
-      height={{lg: "100svh"}}
-      pt={{base: "120px", lg: "0px"}}
-      alignItems={{lg: "center"}}
-      justifyContent={{lg: "center"}}
+      height={{lg: "88svh" }}
+      maxHeight="667px"
+      pt={{ base: "120px", lg: "0px" }}
+      alignItems={{ lg: "center" }}
+      justifyContent={{ lg: "center" }}
+      isolation="isolate"
     >
       <Image
         aria-hidden
         alt=""
         src={BigLogo.src}
         position="absolute"
-        inset="0px"
+        inset={{ base: "0px", lg: "auto" }}
         m="auto"
-        mb={{base: "0px", lg: "auto"}}
-        pb={{lg: "10%"}}
+        mb={{ base: "0px", lg: "auto" }}
+        pb={{ lg: "10%" }}
         zIndex="-10"
       />
 
       <Text
         as="h1"
         id="hero-title"
-        fontSize={{base: "36px", lg: "50px"}}
+        fontSize={{ base: "36px", lg: "50px" }}
         fontWeight="700"
-        lineHeight={{base: "36px", lg: "50px"}}
+        lineHeight={{ base: "36px", lg: "50px" }}
+        letterSpacing="-2.5%"
         maxWidth="30ch"
-        textAlign={{lg: "center"}}
+        textAlign={{ lg: "center" }}
       >
         ¿Quieres automatizar tu negocio y no sabes a quién acudir?
       </Text>
@@ -43,16 +47,20 @@ export default function HeroSection() {
         fontSize="18px"
         lineHeight="28px"
         maxWidth="89ch"
-        textAlign={{lg: "center"}}
+        textAlign={{ lg: "center" }}
         mt="16px"
       >
         Somos la solución a tus necesidades. Tenemos las habilidades, el
         compromiso y la creatividad para llevar tus idea y tu negocio a otro
         nivel ofertándote la posibilidad de crear un sistema que se adapte a tus
-        necesidades. Con Nox no existen barreras contáctenos para poderle
+        necesidades. <br /> Con Nox no existen barreras contáctenos para poderle
         ayudar.
       </Text>
-      <Flex mt={{base: "64px", lg: "32px"}} mb={{base: "90px", lg: "0px"}} mx="auto">
+      <Flex
+        mt={{ base: "64px", lg: "32px" }}
+        mb={{ base: "90px", lg: "0px" }}
+        mx="auto"
+      >
         <Button
           as={NextJsLink}
           py="24px"
@@ -131,6 +139,8 @@ export default function HeroSection() {
           Conocer más
         </Button>
       </Flex>
+
+      <HeroAnimatedOrnaments />
     </Stack>
   );
 }
