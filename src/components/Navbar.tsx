@@ -46,7 +46,7 @@ const socialNetworks = [
   [YoutubeIcon.src, "#"],
 ];
 
-const scrollValueTrigger = 150;
+const scrollValueTrigger = 100;
 
 export default function Navbar() {
   const { scrollPosition, isScrolling } = useScroll(35, 1000);
@@ -68,18 +68,26 @@ export default function Navbar() {
   return (
     <Box
       as="nav"
-      backgroundColor={scrollPosition > 100 ? "hsl(0, 100%, 100%, 40%)" : "none"}
-      backdropFilter={scrollPosition > 100 ? "auto" : "none"}
+      backgroundColor={
+        scrollPosition > scrollValueTrigger * 0.7
+          ? "hsl(0, 100%, 100%, 70%)"
+          : "none"
+      }
+      backdropFilter={
+        scrollPosition > scrollValueTrigger * 0.7 ? "auto" : "none"
+      }
       backdropBlur="4px"
       position="fixed"
       w="100%"
       zIndex="100"
       transform={scrollPosition > scrollValueTrigger ? "auto" : "none"}
       translateY={`${-visibilityPercent.current}%`}
-      transition="transform 300ms ease"
+      transition="transform 300ms ease, background-color 1s ease-out, filter 1s ease-out"
     >
       <Flex alignItems="center" maxWidth="1248px" px="16px" py="24px" mx="auto">
-        <Image mr="32px" alt="Nox logo" src={NoxLogo.src} />
+        <Button as={NextJsLink} href="/" variant="link" mr="32px">
+          <Image alt="Nox logo" src={NoxLogo.src} />
+        </Button>
 
         <Flex
           display={{ base: "none", lg: "flex" }}
@@ -104,7 +112,6 @@ export default function Navbar() {
           py="24px"
           px="24px"
           mr="10px"
-          lineHeight="24px"
           color="#515151"
           href=""
         >
@@ -117,7 +124,6 @@ export default function Navbar() {
           py="24px"
           px="24px"
           position="relative"
-          lineHeight="24px"
           borderRadius="100vw"
           overflow="hidden"
           isolation="isolate"
