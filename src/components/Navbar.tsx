@@ -68,11 +68,7 @@ export default function Navbar() {
   return (
     <Box
       as="nav"
-      backgroundColor={
-        scrollPosition > scrollValueTrigger * 0.7
-          ? "hsl(0, 100%, 100%, 70%)"
-          : "none"
-      }
+      bgGradient="linear-gradient(180deg, rgba(240, 250, 244, 1) 0%, rgba(243, 251, 246, 0.8) 50%, transparent)"
       backdropFilter={
         scrollPosition > scrollValueTrigger * 0.7 ? "auto" : "none"
       }
