@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, Stack, Text } from "@chakra-ui/react";
 import { default as NextJsLink } from "next/link";
 import HeroAnimatedOrnaments from "./HeroAnimatedOrnaments";
 
