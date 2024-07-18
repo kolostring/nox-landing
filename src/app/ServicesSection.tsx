@@ -1,5 +1,5 @@
 "use client";
-import { Grid, Image, Stack, Text } from "@chakra-ui/react";
+import { Grid, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import Service1 from "@/assets/service_icon_1.svg";
 import Service2 from "@/assets/service_icon_2.svg";
@@ -50,17 +50,17 @@ export default function ServicesSection() {
       h="100svh"
       justifyContent="center"
     >
-      <Text
+      <Heading
         as="h2"
         id="services-title"
-        fontSize="48px"
+        fontSize={{ base: "36px", lg: "50px" }}
         fontWeight="700"
-        lineHeight="60px"
+        lineHeight={{ lg: "60px" }}
         letterSpacing="-2.5%"
         textAlign="center"
       >
         Servicios a la medida
-      </Text>
+      </Heading>
       <Text as="p" mt="8px" fontSize="18px" textAlign="center">
         Te adelantamos algunos de nuestros servicios que podemos ofrecerte
       </Text>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--nextjs-font-inter" });

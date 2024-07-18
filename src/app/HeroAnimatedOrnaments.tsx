@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import BigLogo from "@/assets/big_logo.svg";
 
 import Ornament1 from "@/assets/ornament1.png";

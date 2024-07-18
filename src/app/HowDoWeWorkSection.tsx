@@ -14,13 +14,13 @@ import Agent2 from "@/assets/agent_2.png";
 
 export default function HowDoWeWorkSection() {
   return (
-    <Box as="section" aria-labelledby="how_do_we_work-title" mt="96px">
+    <Box as="section" aria-labelledby="how_do_we_work-title" mt="96px" pt="96px">
       <Heading
         as="h2"
         id="how_do_we_work-title"
-        fontSize="48px"
+        fontSize={{ base: "36px", lg: "50px" }}
         fontWeight="700"
-        lineHeight="60px"
+        lineHeight={{ lg: "60px" }}
         letterSpacing="-2.5%"
         textAlign="center"
       >
@@ -45,9 +45,9 @@ export default function HowDoWeWorkSection() {
         <GridItem alignContent="center">
           <Heading
             as="h3"
-            fontSize="40px"
+            fontSize={{ base: "30px", lg: "40px" }}
             fontWeight="500"
-            lineHeight="60px"
+            lineHeight={{base: "30px", lg: "60px" }}
             letterSpacing="-2.5%"
           >
             Contáctenos
@@ -63,6 +63,7 @@ export default function HowDoWeWorkSection() {
             py="24px"
             px="24px"
             mt="15px"
+            w={{base: "full", lg: "fit-content"}}
             position="relative"
             lineHeight="24px"
             borderRadius="100vw"
@@ -107,9 +108,9 @@ export default function HowDoWeWorkSection() {
         <GridItem rowStart={{lg: 2}} alignContent="center">
           <Heading
             as="h3"
-            fontSize="40px"
+            fontSize={{ base: "30px", lg: "40px" }}
             fontWeight="500"
-            lineHeight="60px"
+            lineHeight={{base: "30px", lg: "60px" }}
             letterSpacing="-2.5%"
           >
             Obtener Propuesta
@@ -125,6 +126,7 @@ export default function HowDoWeWorkSection() {
             py="24px"
             px="24px"
             mt="15px"
+            w={{base: "full", lg: "fit-content"}}
             position="relative"
             lineHeight="24px"
             borderRadius="100vw"
