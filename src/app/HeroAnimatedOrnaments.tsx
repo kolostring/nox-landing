@@ -29,9 +29,8 @@ export default function HeroAnimatedOrnaments() {
       <Box position="absolute" left="34%" top="4.5%" zIndex="-10">
         <motion.div style={{ y: parallaxYLevel1 }}>
           <motion.img
-            alt="20"
+            alt="más de 20 aplicaciones modernas"
             src={Ornament1.src}
-            style={{ y: 0 }}
             animate={{ y: [0, 12, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "circInOut" }}
           />
@@ -42,7 +41,6 @@ export default function HeroAnimatedOrnaments() {
           <motion.img
             alt=""
             src={Ornament2.src}
-            style={{ y: 0 }}
             animate={{ y: [0, 12, 0] }}
             transition={{
               repeat: Infinity,
@@ -56,9 +54,8 @@ export default function HeroAnimatedOrnaments() {
       <Box position="absolute" right="-6%" bottom="-6%" zIndex="-10">
         <motion.div style={{ y: parallaxYLevel1 }}>
           <motion.img
-            alt=""
+            alt="más de 130 proyectos terminados"
             src={Ornament3.src}
-            style={{ y: 0 }}
             animate={{ y: [0, 12, 0] }}
             transition={{
               repeat: Infinity,
