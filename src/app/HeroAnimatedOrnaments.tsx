@@ -15,7 +15,9 @@ export default function HeroAnimatedOrnaments() {
   return (
     <>
       {/* Big Logo */}
-      <Flex
+      <Box
+        as={motion.div}
+        display="flex"
         position="absolute"
         inset={{ base: "0px", lg: "auto" }}
         mb={{ base: "0px", lg: "auto" }}
@@ -23,52 +25,64 @@ export default function HeroAnimatedOrnaments() {
         justifyContent="center"
         alignItems="center"
         zIndex="-20"
+        style={{ y: parallaxBackground }}
       >
-        <motion.div style={{ y: parallaxBackground }}>
-          <Image alt="" src={BigLogo.src} />
-        </motion.div>
-      </Flex>
+        <Image alt="" src={BigLogo.src} />
+      </Box>
 
       {/* Ornaments */}
-      <Box position="absolute" left="34%" top="4.5%" zIndex="-10">
-        <motion.div style={{ y: parallaxForeground }}>
-          <motion.img
-            alt="más de 20 aplicaciones modernas"
-            src={Ornament1.src}
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "circInOut" }}
-          />
-        </motion.div>
+      <Box
+        as={motion.div}
+        position="absolute"
+        left="34%"
+        top="4.5%"
+        style={{ y: parallaxForeground }}
+      >
+        <motion.img
+          alt="más de 20 aplicaciones modernas"
+          src={Ornament1.src}
+          animate={{ y: [0, 12, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "circInOut" }}
+        />
       </Box>
-      <Box position="absolute" left="-5%" bottom="4%" zIndex="-10">
-        <motion.div style={{ y: parallaxForeground }}>
-          <motion.img
-            alt=""
-            src={Ornament2.src}
-            animate={{ y: [0, 12, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 6,
-              ease: "circInOut",
-              delay: 1,
-            }}
-          />
-        </motion.div>
+
+      <Box
+        as={motion.div}
+        position="absolute"
+        left="-5%"
+        bottom="4%"
+        style={{ y: parallaxForeground }}
+      >
+        <motion.img
+          alt=""
+          src={Ornament2.src}
+          animate={{ y: [0, 12, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 6,
+            ease: "circInOut",
+            delay: 1,
+          }}
+        />
       </Box>
-      <Box position="absolute" right="-6%" bottom="-6%" zIndex="-10">
-        <motion.div style={{ y: parallaxForeground }}>
-          <motion.img
-            alt="más de 130 proyectos terminados"
-            src={Ornament3.src}
-            animate={{ y: [0, 12, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 6,
-              ease: "circInOut",
-              delay: 2,
-            }}
-          />
-        </motion.div>
+      <Box
+        as={motion.div}
+        position="absolute"
+        right="-6%"
+        bottom="-6%"
+        style={{ y: parallaxForeground }}
+      >
+        <motion.img
+          alt="más de 130 proyectos terminados"
+          src={Ornament3.src}
+          animate={{ y: [0, 12, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 6,
+            ease: "circInOut",
+            delay: 2,
+          }}
+        />
       </Box>
 
       {/* Particles */}
