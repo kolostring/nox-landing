@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import BigLogo from "@/assets/big_logo.svg";
 
 import Ornament1 from "@/assets/ornament1.png";
@@ -33,9 +33,90 @@ export default function HeroAnimatedOrnaments() {
       {/* Ornaments */}
       <Box
         as={motion.div}
+        visibility={{ base: "visible", lg: "hidden" }}
         position="absolute"
-        left="34%"
-        top="4.5%"
+        top="0%"
+        left="2%"
+        userSelect="none"
+
+        style={{ y: parallaxForeground }}
+      >
+        <Grid
+          p="12px"
+          rounded="8px"
+          bg="white"
+          boxShadow="0px 80px 70px 0px hsl(0,100%,0%, 7%)"
+          templateColumns="1fr 1fr"
+          justifyItems="center"
+          columnGap="4px"
+        >
+          <GridItem
+            fontSize="30px"
+            fontWeight="700"
+            color="#0AC05E"
+            rowSpan={2}
+          >
+            20+
+          </GridItem>
+          <GridItem
+            fontSize="8px"
+            fontWeight="700"
+            alignContent="end"
+            color="#888888"
+          >
+            modernas
+          </GridItem>
+          <GridItem fontSize="10px" fontWeight="700">
+            aplicaciones
+          </GridItem>
+        </Grid>
+      </Box>
+      <Box
+        as={motion.div}
+        visibility={{ base: "visible", lg: "hidden" }}
+        position="absolute"
+        top="4%"
+        right="0%"
+        userSelect="none"
+        style={{ y: parallaxForeground }}
+      >
+        <Grid
+          p="12px"
+          rounded="8px"
+          bg="white"
+          boxShadow="0px 80px 70px 0px hsl(0,100%,0%, 7%)"
+          templateColumns="1fr 1fr"
+          justifyItems="center"
+          columnGap="4px"
+        >
+          <GridItem
+            fontSize="30px"
+            fontWeight="700"
+            color="#0AC05E"
+            rowSpan={2}
+          >
+            130+
+          </GridItem>
+          <GridItem
+            fontSize="8px"
+            fontWeight="700"
+            alignContent="end"
+            color="#888888"
+          >
+            proyectos
+          </GridItem>
+          <GridItem fontSize="10px" fontWeight="700">
+            terminados
+          </GridItem>
+        </Grid>
+      </Box>
+
+      <Box
+        as={motion.div}
+        display={{ base: "none", lg: "flex" }}
+        position="absolute"
+        left={{ lg: "34%" }}
+        top="0%"
         style={{ y: parallaxForeground }}
       >
         <motion.img
@@ -48,9 +129,10 @@ export default function HeroAnimatedOrnaments() {
 
       <Box
         as={motion.div}
+        display={{ base: "none", lg: "flex" }}
         position="absolute"
         left="-5%"
-        bottom="4%"
+        bottom={{ base: "-20%", lg: "4%" }}
         style={{ y: parallaxForeground }}
       >
         <motion.img
@@ -67,9 +149,10 @@ export default function HeroAnimatedOrnaments() {
       </Box>
       <Box
         as={motion.div}
+        display={{ base: "none", lg: "flex" }}
         position="absolute"
         right="-6%"
-        bottom="-6%"
+        top={{ base: "70%", lg: "36%" }}
         style={{ y: parallaxForeground }}
       >
         <motion.img
@@ -92,7 +175,7 @@ export default function HeroAnimatedOrnaments() {
         w="139px"
         h="118px"
         left="1%"
-        top="5%"
+        top={{ base: "0%", lg: "5%" }}
         zIndex="-10"
         style={{
           y: parallaxBackground,

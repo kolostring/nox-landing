@@ -25,7 +25,7 @@ export default function HeroSection() {
         lineHeight={{ base: "36px", lg: "50px" }}
         letterSpacing="-2.5%"
         maxWidth="30ch"
-        textAlign={{ lg: "center" }}
+        textAlign="center"
       >
         ¿Quieres automatizar tu negocio y no sabes a quién acudir?
       </Text>
@@ -34,7 +34,7 @@ export default function HeroSection() {
         fontSize="18px"
         lineHeight="28px"
         maxWidth="89ch"
-        textAlign={{ lg: "center" }}
+        textAlign="center"
         mt="16px"
       >
         Somos la solución a tus necesidades. Tenemos las habilidades, el
@@ -109,7 +109,7 @@ export default function HeroSection() {
             w: "500%",
             zIndex: "-10",
             bgGradient:
-              "Conic(from 45deg, hsl(148, 90%, 40%), hsl(108, 100%, 87%), hsl(148, 90%, 40%))",
+              "Conic(from 45deg, hsl(148, 90%, 40%), hsl(78, 100%, 57%), hsl(148, 90%, 40%))",
             animation: "rotate 3s linear infinite",
           }}
           _after={{
