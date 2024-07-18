@@ -1,6 +1,5 @@
 import { Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { default as NextJsLink } from "next/link";
-import BigLogo from "@/assets/big_logo.svg";
 import HeroAnimatedOrnaments from "./HeroAnimatedOrnaments";
 
 export default function HeroSection() {
@@ -18,18 +17,6 @@ export default function HeroSection() {
       justifyContent={{ lg: "center" }}
       isolation="isolate"
     >
-      <Image
-        aria-hidden
-        alt=""
-        src={BigLogo.src}
-        position="absolute"
-        inset={{ base: "0px", lg: "auto" }}
-        m="auto"
-        mb={{ base: "0px", lg: "auto" }}
-        pb={{ lg: "10%" }}
-        zIndex="-10"
-      />
-
       <Text
         as="h1"
         id="hero-title"
@@ -74,7 +61,7 @@ export default function HeroSection() {
           bgColor="hsl(148, 90%, 40%)"
           color="white"
           shadow="0px 20px 50px hsl(148, 90%, 0%, 20%)"
-          href=""
+          href="#"
           _hover={{
             "&:before": {
               opacity: "1",
@@ -113,7 +100,7 @@ export default function HeroSection() {
           lineHeight="24px"
           color="#515151"
           overflow="hidden"
-          href=""
+          href="#"
           _hover={{}}
           _before={{
             content: '""',

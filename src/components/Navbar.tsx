@@ -113,7 +113,7 @@ export default function Navbar() {
           px="24px"
           mr="10px"
           color="#515151"
-          href=""
+          href="#"
         >
           Conocer más
         </Button>
@@ -130,7 +130,7 @@ export default function Navbar() {
           bgColor="hsl(148, 90%, 40%)"
           color="white"
           shadow="0px 20px 50px hsl(148, 90%, 0%, 20%)"
-          href=""
+          href="#"
           _hover={{
             "&:before": {
               opacity: "1",
@@ -206,7 +206,7 @@ export default function Navbar() {
                   mt="auto"
                   lineHeight="24px"
                   color="#515151"
-                  href=""
+                  href="#"
                 >
                   Conocer más
                 </Button>
@@ -221,7 +221,7 @@ export default function Navbar() {
                   bgColor="hsl(148, 90%, 40%)"
                   color="white"
                   shadow="0px 20px 50px hsl(148, 90%, 0%, 20%)"
-                  href=""
+                  href="#"
                   _active={{
                     bgColor: "hsl(108, 82%, 67%)",
                   }}
