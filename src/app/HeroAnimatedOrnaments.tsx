@@ -9,7 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HeroAnimatedOrnaments() {
   const { scrollY } = useScroll();
-  const parallaxForeground = useTransform(() => scrollY.get() * -0.3);
+  const parallaxForeground = useTransform(() => scrollY.get() * -0.4);
   const parallaxBackground = useTransform(() => scrollY.get() * 0.3);
 
   return (
@@ -35,8 +35,8 @@ export default function HeroAnimatedOrnaments() {
         as={motion.div}
         visibility={{ base: "visible", lg: "hidden" }}
         position="absolute"
-        top="0%"
-        left="2%"
+        bottom="-7%"
+        left="0%"
         userSelect="none"
 
         style={{ y: parallaxForeground }}
@@ -75,8 +75,8 @@ export default function HeroAnimatedOrnaments() {
         as={motion.div}
         visibility={{ base: "visible", lg: "hidden" }}
         position="absolute"
-        top="4%"
-        right="0%"
+        bottom="4%"
+        right="30%"
         userSelect="none"
         style={{ y: parallaxForeground }}
       >

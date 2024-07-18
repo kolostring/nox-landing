@@ -1,5 +1,5 @@
 "use client";
-import { Image, Stack, Text } from "@chakra-ui/react";
+import { Grid, Image, Stack, Text } from "@chakra-ui/react";
 
 import Service1 from "@/assets/service_icon_1.svg";
 import Service2 from "@/assets/service_icon_2.svg";
@@ -44,7 +44,12 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <Stack as="section" aria-labelledby="services-title" h="100svh" justifyContent="center">
+    <Stack
+      as="section"
+      aria-labelledby="services-title"
+      h="100svh"
+      justifyContent="center"
+    >
       <Text
         as="h2"
         id="services-title"
@@ -60,13 +65,11 @@ export default function ServicesSection() {
         Te adelantamos algunos de nuestros servicios que podemos ofrecerte
       </Text>
 
-      <motion.div
-        style={{
-          display: "grid",
-          marginTop: "64px",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "30px 64px",
-        }}
+      <Grid
+        as={motion.div}
+        marginTop="64px"
+        templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr 1fr" }}
+        gap={{base: "30px 10px", lg:"64px 30px"}}
         variants={{
           hidden: { opacity: 0 },
           show: {
@@ -92,7 +95,7 @@ export default function ServicesSection() {
             <Text
               as="h3"
               mt="24px"
-              fontSize="30px"
+              fontSize={{base:"18px", lg: "30px"}}
               fontWeight="700"
               textAlign="center"
             >
@@ -103,7 +106,7 @@ export default function ServicesSection() {
             </Text>
           </motion.article>
         ))}
-      </motion.div>
+      </Grid>
     </Stack>
   );
 }
