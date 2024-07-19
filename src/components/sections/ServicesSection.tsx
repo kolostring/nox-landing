@@ -47,6 +47,7 @@ export default function ServicesSection() {
     <Stack
       as="section"
       aria-labelledby="services-title"
+      id="services-section"
       maxWidth="1248px"
       py={{base: "46px",lg: "96px"}}
       px="16px"

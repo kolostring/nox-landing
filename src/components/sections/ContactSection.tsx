@@ -26,6 +26,7 @@ export default function ContactSection() {
     <Grid
       as="section"
       aria-labelledby="contacts-title"
+      id="contact-section"
       templateColumns={{ lg: "1fr 1fr" }}
       templateRows={{ base: "1fr 3fr", lg: "1fr" }}
     >

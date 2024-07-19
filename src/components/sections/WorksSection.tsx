@@ -25,6 +25,7 @@ export default function WorksSection() {
     <Box
       as="section"
       aria-labelledby="works-title"
+      id="works-section"
       py={{base: "46px",lg: "96px"}}
       maxWidth="1248px"
       px="16px"

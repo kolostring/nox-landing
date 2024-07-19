@@ -17,6 +17,7 @@ export default function HowDoWeWorkSection() {
     <Box
       as="section"
       aria-labelledby="how_do_we_work-title"
+      id="how_do_we_work-section"
       maxWidth="1248px"
       py={{base: "46px",lg: "96px"}}
       px="16px"

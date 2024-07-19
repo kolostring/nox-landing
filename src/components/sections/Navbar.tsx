@@ -30,12 +30,12 @@ import TwitterIcon from "@/assets/twitter_icon.svg";
 import YoutubeIcon from "@/assets/youtube_icon.svg";
 
 const navLinks = [
-  ["Servicios", "#"],
-  ["Pasos", "#"],
-  ["Nuestro Equipo", "#"],
-  ["Trabajos", "#"],
-  ["Comentarios", "#"],
-  ["Contacto", "#"],
+  ["Servicios", "/#services-section"],
+  ["Pasos", "/#how_do_we_work-section"],
+  ["Nuestro Equipo", "/#team-section"],
+  ["Trabajos", "/#works-section"],
+  ["Comentarios", "/#testimonials-section"],
+  ["Contacto", "/#contact-section"],
   ["Blog", "#"],
 ];
 
@@ -81,7 +81,7 @@ export default function Navbar() {
       transition="transform 300ms ease, background-color 1s ease-out, filter 1s ease-out"
     >
       <Flex alignItems="center" maxWidth="1248px" px="16px" py="24px" mx="auto">
-        <Button as={NextJsLink} href="/" variant="link" mr="32px">
+        <Button as={NextJsLink} href="/#hero-section" variant="link" mr="32px">
           <Image alt="Nox logo" src={NoxLogo.src} />
         </Button>
 
@@ -177,7 +177,7 @@ export default function Navbar() {
           <DrawerContent bgGradient="Linear(to-t, #FAFAFA, #F6F6F6)">
             <DrawerHeader>
               <DrawerCloseButton />
-              <Button as={NextJsLink} href="/" variant="link">
+              <Button as={NextJsLink} href="/#hero-section" variant="link">
                 <Image alt="Nox logo" src={NoxLogo.src} />
               </Button>
             </DrawerHeader>

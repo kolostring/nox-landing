@@ -18,12 +18,12 @@ import TwitterIcon from "@/assets/twitter_icon.svg";
 import YoutubeIcon from "@/assets/youtube_icon.svg";
 
 const navLinks = [
-  ["Servicios", "#"],
-  ["Pasos", "#"],
-  ["Nuestro Equipo", "#"],
-  ["Trabajos", "#"],
-  ["Comentarios", "#"],
-  ["Contacto", "#"],
+  ["Servicios", "/#services-section"],
+  ["Pasos", "/#how_do_we_work-section"],
+  ["Nuestro Equipo", "/#team-section"],
+  ["Trabajos", "/#works-section"],
+  ["Comentarios", "/#testimonials-section"],
+  ["Contacto", "/#contact-section"],
   ["Blog", "#"],
 ];
 
@@ -46,7 +46,7 @@ export default function Footer() {
         templateColumns="1fr 2fr"
         gap="36px"
       >
-        <GridItem as={NextJsLink} href="/">
+        <GridItem as={NextJsLink} href="/#hero-section">
           <Image alt="ir a home" src={NoxLogo.src} />
         </GridItem>
         <GridItem
