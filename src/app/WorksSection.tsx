@@ -25,7 +25,7 @@ export default function WorksSection() {
     <Box
       as="section"
       aria-labelledby="works-title"
-      py="96px"
+      py={{base: "46px",lg: "96px"}}
       maxWidth="1248px"
       px="16px"
       mx="auto"
@@ -74,7 +74,7 @@ export default function WorksSection() {
       <Grid
         mt="25px"
         gridGap="1rem"
-        templateColumns="repeat(auto-fit, minmax(min(100%, 230px), 1fr))"
+        templateColumns={{base: "1fr 1fr", lg: "repeat(auto-fit, minmax(min(100%, 230px), 1fr))"}}
       >
         {[...new Array(12)].map((val, index) => (
           <GridItem

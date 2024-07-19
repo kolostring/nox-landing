@@ -29,7 +29,7 @@ export default function TeamSection() {
     <Box
       as="section"
       aria-labelledby="team-title"
-      py="96px"
+      py={{base: "46px",lg: "96px"}}
       maxWidth="1248px"
       px="16px"
       mx="auto"

@@ -48,7 +48,7 @@ export default function ServicesSection() {
       as="section"
       aria-labelledby="services-title"
       maxWidth="1248px"
-      py="96px"
+      py={{base: "46px",lg: "96px"}}
       px="16px"
       mx="auto"
       justifyContent="center"

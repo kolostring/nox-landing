@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
     <Box
       as="section"
       aria-labelledby="testimonials-title"
-      py="96px"
+      py={{base: "46px",lg: "96px"}}
       minH={{lg: "100svh"}}
       bg="#F8F8F8"
     >

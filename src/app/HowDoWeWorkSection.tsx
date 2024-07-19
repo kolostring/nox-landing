@@ -18,7 +18,7 @@ export default function HowDoWeWorkSection() {
       as="section"
       aria-labelledby="how_do_we_work-title"
       maxWidth="1248px"
-      py="96px"
+      py={{base: "46px",lg: "96px"}}
       px="16px"
       mx="auto"
     >
