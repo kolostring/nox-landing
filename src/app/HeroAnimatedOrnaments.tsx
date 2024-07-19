@@ -35,7 +35,7 @@ export default function HeroAnimatedOrnaments() {
         as={motion.div}
         visibility={{ base: "visible", lg: "hidden" }}
         position="absolute"
-        bottom="-7%"
+        top="880px"
         left="0%"
         userSelect="none"
 
@@ -75,7 +75,7 @@ export default function HeroAnimatedOrnaments() {
         as={motion.div}
         visibility={{ base: "visible", lg: "hidden" }}
         position="absolute"
-        bottom="4%"
+        top="800px"
         right="30%"
         userSelect="none"
         style={{ y: parallaxForeground }}
