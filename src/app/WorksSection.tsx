@@ -22,7 +22,14 @@ export default function WorksSection() {
   const [selectedFilter, setSelectedFilter] = useState(filters[0][0]);
 
   return (
-    <Box as="section" aria-labelledby="works-title" py="96px">
+    <Box
+      as="section"
+      aria-labelledby="works-title"
+      py="96px"
+      maxWidth="1248px"
+      px="16px"
+      mx="auto"
+    >
       <Heading
         as="h2"
         id="works-title"
@@ -57,15 +64,26 @@ export default function WorksSection() {
                 ? "0px 20px 50px hsl(148, 90%, 0%, 20%)"
                 : "none"
             }
-            onClick={()=>setSelectedFilter(key)}
+            onClick={() => setSelectedFilter(key)}
           >
             {label}
           </Button>
         ))}
       </Flex>
 
-      <Grid mt="25px" gridGap="1rem" templateColumns="repeat(auto-fit, minmax(min(100%, 230px), 1fr))">
-        {[... new Array(12)].map((val, index)=>(<GridItem bg={index%2?"hsl(88, 90%, 40%)":"hsl(148, 90%, 40%)"} h="230px" w="full" key={index}></GridItem>))}
+      <Grid
+        mt="25px"
+        gridGap="1rem"
+        templateColumns="repeat(auto-fit, minmax(min(100%, 230px), 1fr))"
+      >
+        {[...new Array(12)].map((val, index) => (
+          <GridItem
+            bg={index % 2 ? "hsl(88, 90%, 40%)" : "hsl(148, 90%, 40%)"}
+            h="230px"
+            w="full"
+            key={index}
+          ></GridItem>
+        ))}
       </Grid>
     </Box>
   );

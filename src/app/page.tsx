@@ -8,7 +8,7 @@ import TestimonialsSection from "./TestimonialsSection";
 
 export default function Home() {
   return (
-    <Box as="main" px="16px" pt="12svh" maxWidth="1248px" mx="auto" textColor="#111827">
+    <Box as="main" pt="12svh" textColor="#111827">
       <HeroSection />
       <ServicesSection />
       <HowDoWeWorkSection />

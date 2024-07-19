@@ -14,7 +14,14 @@ import Agent2 from "@/assets/agent_2.png";
 
 export default function HowDoWeWorkSection() {
   return (
-    <Box as="section" aria-labelledby="how_do_we_work-title" mt="96px" pt="96px">
+    <Box
+      as="section"
+      aria-labelledby="how_do_we_work-title"
+      maxWidth="1248px"
+      py="96px"
+      px="16px"
+      mx="auto"
+    >
       <Heading
         as="h2"
         id="how_do_we_work-title"
@@ -38,7 +45,11 @@ export default function HowDoWeWorkSection() {
         siguientes pasos para podernos comunicar y conocer sus necesidades.
       </Text>
 
-      <Grid templateColumns="repeat(2, minmax(0, 1fr))" rowGap={{base:"56px", lg: "0px"}} mt={{base: "56px" ,lg: "0px"}}>
+      <Grid
+        templateColumns="repeat(2, minmax(0, 1fr))"
+        rowGap={{ base: "56px", lg: "0px" }}
+        mt={{ base: "56px", lg: "0px" }}
+      >
         <GridItem>
           <Image alt="Paso 1" src={Agent1.src} />
         </GridItem>
@@ -47,7 +58,7 @@ export default function HowDoWeWorkSection() {
             as="h3"
             fontSize={{ base: "30px", lg: "40px" }}
             fontWeight="500"
-            lineHeight={{base: "30px", lg: "60px" }}
+            lineHeight={{ base: "30px", lg: "60px" }}
             letterSpacing="-2.5%"
           >
             Contáctenos
@@ -63,7 +74,7 @@ export default function HowDoWeWorkSection() {
             py="24px"
             px="24px"
             mt="15px"
-            w={{base: "full", lg: "fit-content"}}
+            w={{ base: "full", lg: "fit-content" }}
             position="relative"
             lineHeight="24px"
             borderRadius="100vw"
@@ -102,15 +113,15 @@ export default function HowDoWeWorkSection() {
             Contactar
           </Button>
         </GridItem>
-        <GridItem colStart={{lg: 2}}>
-          <Image alt="Paso 2" src={Agent2.src}/>
+        <GridItem colStart={{ lg: 2 }}>
+          <Image alt="Paso 2" src={Agent2.src} />
         </GridItem>
-        <GridItem rowStart={{lg: 2}} alignContent="center">
+        <GridItem rowStart={{ lg: 2 }} alignContent="center">
           <Heading
             as="h3"
             fontSize={{ base: "30px", lg: "40px" }}
             fontWeight="500"
-            lineHeight={{base: "30px", lg: "60px" }}
+            lineHeight={{ base: "30px", lg: "60px" }}
             letterSpacing="-2.5%"
           >
             Obtener Propuesta
@@ -126,7 +137,7 @@ export default function HowDoWeWorkSection() {
             py="24px"
             px="24px"
             mt="15px"
-            w={{base: "full", lg: "fit-content"}}
+            w={{ base: "full", lg: "fit-content" }}
             position="relative"
             lineHeight="24px"
             borderRadius="100vw"

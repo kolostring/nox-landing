@@ -10,8 +10,11 @@ export default function HeroSection() {
       aria-labelledby="hero-title"
       position="relative"
       width="full"
+      maxWidth="1248px"
       height={{base: "100svh", lg:"88svh"}}
       pt={{ base: "120px", lg: "0px" }}
+      px="16px"
+      mx="auto"
       alignItems={{ lg: "center" }}
       justifyContent={{ lg: "center" }}
       isolation="isolate"

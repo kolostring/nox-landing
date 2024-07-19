@@ -32,6 +32,7 @@ export default function TestimonialsSection() {
       as="section"
       aria-labelledby="testimonials-title"
       py="96px"
+      minH={{lg: "100svh"}}
       bg="#F8F8F8"
     >
       <Heading
@@ -51,12 +52,19 @@ export default function TestimonialsSection() {
         estos son sus comentarios
       </Text>
 
-      <Flex alignItems="center" gap="10px">
+      <Flex
+        alignItems="center"
+        gap="10px"
+        maxWidth="1248px"
+        px="16px"
+        mx="auto"
+      >
         <Button
           h="56px"
           aspectRatio="1/1"
           rounded="full"
           variant="outline"
+          flexShrink={0}
           onClick={() =>
             setCurrentTestimonial(
               currentTestimonial === 0
@@ -86,7 +94,7 @@ export default function TestimonialsSection() {
                 <Image alt="" src={Quote.src} top="0px" mx="auto" />
                 <Text
                   py="46px"
-                  fontSize="24px"
+                  fontSize={{base: "14px", lg: "24px"}}
                   fontWeight="500"
                   textAlign="center"
                 >
@@ -114,6 +122,7 @@ export default function TestimonialsSection() {
           aspectRatio="1/1"
           rounded="full"
           variant="outline"
+          flexShrink={0}
           onClick={() =>
             setCurrentTestimonial(
               currentTestimonial === testimonials.length - 1

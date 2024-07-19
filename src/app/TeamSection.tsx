@@ -26,7 +26,14 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <Box as="section" aria-labelledby="team-title" py="96px" >
+    <Box
+      as="section"
+      aria-labelledby="team-title"
+      py="96px"
+      maxWidth="1248px"
+      px="16px"
+      mx="auto"
+    >
       <Heading
         as="h2"
         id="team-title"
@@ -41,12 +48,29 @@ export default function TeamSection() {
 
       <Wrap justify="center" pt="50px">
         {team.map(([name, image, title, role]) => (
-          <WrapItem as={Stack} key={name} mt="50px" alignItems="center" gap="0px" w={{base: "150px", lg: "250px"}}>
+          <WrapItem
+            as={Stack}
+            key={name}
+            mt="50px"
+            alignItems="center"
+            gap="0px"
+            w={{ base: "150px", lg: "250px" }}
+          >
             <Avatar name={name} src={image} h="100px" w="100px" />
-            <Heading as="h3" mt="10px" maxW={{base: "13ch", lg: "auto"}} fontSize="18px" fontWeight="600" lineHeight="28px" textAlign="center">
+            <Heading
+              as="h3"
+              mt="10px"
+              maxW={{ base: "13ch", lg: "auto" }}
+              fontSize="18px"
+              fontWeight="600"
+              lineHeight="28px"
+              textAlign="center"
+            >
               {title + " " + name}
             </Heading>
-            <Text fontSize="15px" lineHeight="28px" textAlign="center">{role}</Text>
+            <Text fontSize="15px" lineHeight="28px" textAlign="center">
+              {role}
+            </Text>
           </WrapItem>
         ))}
       </Wrap>

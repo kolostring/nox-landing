@@ -47,7 +47,10 @@ export default function ServicesSection() {
     <Stack
       as="section"
       aria-labelledby="services-title"
-      h="100svh"
+      maxWidth="1248px"
+      py="96px"
+      px="16px"
+      mx="auto"
       justifyContent="center"
     >
       <Heading
@@ -68,13 +71,13 @@ export default function ServicesSection() {
       <Grid
         as={motion.div}
         marginTop="64px"
-        templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr 1fr" }}
-        gap={{base: "30px 10px", lg:"64px 30px"}}
+        templateColumns={{ base: "repeat(2, minmax(0,1fr))", lg: "repeat(3, minmax(0,1fr))" }}
+        gap={{ base: "30px 10px", lg: "64px 30px" }}
         variants={{
           hidden: { opacity: 0 },
           show: {
             opacity: 1,
-            transition: { staggerChildren: 0.3 },
+            transition: { staggerChildren: 0.1 },
           },
         }}
         initial="hidden"
@@ -95,7 +98,7 @@ export default function ServicesSection() {
             <Text
               as="h3"
               mt="24px"
-              fontSize={{base:"18px", lg: "30px"}}
+              fontSize={{ base: "18px", lg: "30px" }}
               fontWeight="700"
               textAlign="center"
             >
