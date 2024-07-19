@@ -27,7 +27,7 @@ export default function ContactSection() {
       as="section"
       aria-labelledby="contacts-title"
       templateColumns={{ lg: "1fr 1fr" }}
-      templateRows={{ base: "1fr 3fr", lg: undefined }}
+      templateRows={{ base: "1fr 3fr", lg: "1fr" }}
     >
       <GridItem position="relative">
         <Image
