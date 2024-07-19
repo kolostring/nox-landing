@@ -1,6 +1,5 @@
 import { Button, Flex, Stack, Text } from "@chakra-ui/react";
 import { default as NextJsLink } from "next/link";
-import HeroAnimatedOrnaments from "./HeroAnimatedOrnaments";
 
 export default function HeroSection() {
   return (
@@ -11,12 +10,12 @@ export default function HeroSection() {
       position="relative"
       width="full"
       maxWidth="1248px"
-      height={{base: "100svh", lg:"88svh"}}
-      pt={{ base: "120px", lg: "0px" }}
+      minH="max(800px,100svh)"
+      pt={{base: "120px", lg: "120px"}}
       px="16px"
       mx="auto"
       alignItems={{ lg: "center" }}
-      justifyContent={{ lg: "center" }}
+      justifyContent="center"
       isolation="isolate"
     >
       <Text
@@ -128,8 +127,6 @@ export default function HeroSection() {
           Conocer más
         </Button>
       </Flex>
-
-      <HeroAnimatedOrnaments />
     </Stack>
   );
 }

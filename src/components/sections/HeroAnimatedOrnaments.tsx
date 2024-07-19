@@ -1,5 +1,5 @@
 "use client";
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import BigLogo from "@/assets/big_logo.svg";
 
 import Ornament1 from "@/assets/ornament1.png";
@@ -13,7 +13,19 @@ export default function HeroAnimatedOrnaments() {
   const parallaxBackground = useTransform(() => scrollY.get() * 0.3);
 
   return (
-    <>
+    <Flex
+      position="absolute"
+      inset="0px"
+      top={{lg: "12svh"}}
+      w="full"
+      maxWidth="1248px"
+      height={{ base: "100svh", lg: "88svh" }}
+      mt={{ base: "120px", lg: "0px" }}
+      px="16px"
+      mx="auto"
+      alignItems={{ lg: "center" }}
+      justifyContent={{ lg: "center" }}
+    >
       {/* Big Logo */}
       <Box
         as={motion.div}
@@ -38,7 +50,6 @@ export default function HeroAnimatedOrnaments() {
         top="880px"
         left="0%"
         userSelect="none"
-
         style={{ y: parallaxForeground }}
       >
         <Grid
@@ -250,6 +261,106 @@ export default function HeroAnimatedOrnaments() {
           bottom="50%"
         />
       </Box>
-    </>
+
+      <Box
+        as={motion.div}
+        position="absolute"
+        w="190px"
+        h="216px"
+        left="2%"
+        top="150vh"
+        zIndex="-20"
+        style={{
+          y: parallaxBackground,
+        }}
+      >
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#0AC05E"
+          top="0%"
+          left="30%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#413BB7"
+          right="0%"
+          top="30%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="15px"
+          bg="#DC0511"
+          left="45%"
+          bottom="40%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#C0980A"
+          left="0%"
+          bottom="0%"
+        />
+      </Box>
+
+      <Box
+        as={motion.div}
+        position="absolute"
+        w="190px"
+        h="216px"
+        right="2%"
+        top="270vh"
+        zIndex="-20"
+        style={{
+          y: parallaxBackground,
+        }}
+      >
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#0AC05E"
+          bottom="0%"
+          right="20%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#413BB7"
+          bottom="20%"
+          left="0%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="15px"
+          bg="#DC0511"
+          right="45%"
+          top="40%"
+        />
+        <Box
+          position="absolute"
+          aspectRatio="1/1"
+          rounded="full"
+          h="10px"
+          bg="#C0980A"
+          top="0%"
+          right="0%"
+        />
+      </Box>
+    </Flex>
   );
 }

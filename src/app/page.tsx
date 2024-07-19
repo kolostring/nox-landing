@@ -6,10 +6,12 @@ import TeamSection from "../components/sections/TeamSection";
 import WorksSection from "../components/sections/WorksSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import ContactSection from "../components/sections/ContactSection";
+import HeroAnimatedOrnaments from "@/components/sections/HeroAnimatedOrnaments";
 
 export default function Home() {
   return (
-    <Box as="main" pt="12svh" textColor="#111827">
+    <Box as="main" textColor="#111827">
+      <HeroAnimatedOrnaments />
       <HeroSection />
       <ServicesSection />
       <HowDoWeWorkSection />
