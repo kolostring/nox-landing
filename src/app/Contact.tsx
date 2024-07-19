@@ -26,7 +26,8 @@ export default function ContactSection() {
     <Grid
       as="section"
       aria-labelledby="contacts-title"
-      templateColumns="1fr 1fr"
+      templateColumns={{ lg: "1fr 1fr" }}
+      templateRows={{ base: "1fr 3fr", lg: undefined }}
     >
       <GridItem position="relative">
         <Image
@@ -58,8 +59,16 @@ export default function ContactSection() {
 
         <Stack as="form" w="full" action="/">
           <Grid mt="40px" w="full" templateColumns="1fr 1fr" gap="20px">
-            <GridItem as={Input} placeholder="Nombre" />
-            <GridItem as={Input} placeholder="Apellidos" />
+            <GridItem
+              as={Input}
+              placeholder="Nombre"
+              colSpan={{ base: 2, lg: undefined }}
+            />
+            <GridItem
+              as={Input}
+              placeholder="Apellidos"
+              colSpan={{ base: 2, lg: undefined }}
+            />
             <GridItem as={Input} placeholder="Correo" colSpan={2} />
             <GridItem as={Input} placeholder="Teléfono" colSpan={2} />
             <GridItem
@@ -76,7 +85,7 @@ export default function ContactSection() {
             px="24px"
             mt="20px"
             ml="auto"
-            w="fit-content"
+            w={{base: "full", lg:"fit-content"}}
             lineHeight="24px"
             borderRadius="100vw"
             _hover={{
@@ -93,7 +102,13 @@ export default function ContactSection() {
           </Button>
         </Stack>
 
-        <Grid templateColumns="1fr 1fr 1fr" alignItems="center" justifyItems="center" mt="20px">
+        <Grid
+          templateColumns={{lg:"1fr 1fr 1fr"}}
+          alignItems="center"
+          justifyItems={{lg:"center"}}
+          gap="10px"
+          mt="20px"
+        >
           {contacts.map(([image, label, value]) => (
             <GridItem
               key={value}
@@ -102,7 +117,7 @@ export default function ContactSection() {
               gap="2px"
               h="fit-content"
             >
-              <GridItem as={Image} alt="" src={image} rowSpan={2} />
+              <GridItem as={Image} alt="" src={image} alignSelf="center" rowSpan={2} w="44px" />
               <GridItem
                 as="h3"
                 color="#0AC05E"
