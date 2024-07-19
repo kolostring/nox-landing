@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import HeroSection from "./HeroSection";
 import ServicesSection from "./ServicesSection";
 import HowDoWeWorkSection from "./HowDoWeWorkSection";
+import TeamSection from "./TeamSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <HowDoWeWorkSection />
+      <TeamSection />
     </Box>
   );
 }
