@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Quote from "@/assets/quote.svg";
 import LeftArrow from "@/assets/left_arrow.svg";
@@ -22,13 +22,13 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  
+
   return (
     <Box
       as="section"
       aria-labelledby="testimonials-title"
-      py={{base: "46px",lg: "96px"}}
-      minH={{lg: "100svh"}}
+      py={{ base: "46px", lg: "96px" }}
+      minH={{ lg: "100svh" }}
       bg="#F8F8F8"
     >
       <Heading
@@ -72,7 +72,24 @@ export default function TestimonialsSection() {
           <Image alt="testimonio anterior" src={LeftArrow.src} />
         </Button>
 
-        <Box maxW="800px" w="full" mx="auto" mt="40px" overflowX="hidden">
+        <Box
+          position="relative"
+          maxW="1000px"
+          w="full"
+          mx="auto"
+          pt="40px"
+          overflow="hidden"
+          isolation="isolate"
+        >
+          <Box
+            position="absolute"
+            zIndex="10"
+            w="full"
+            h="300%"
+            inset="0px"
+            shadow={{lg: "inset 0px 0px 40px 40px #F8F8F8"}}
+            m="auto"
+          />
           <Flex
             w="full"
             transform="auto"
@@ -90,7 +107,9 @@ export default function TestimonialsSection() {
                 <Image alt="" src={Quote.src} top="0px" mx="auto" />
                 <Text
                   py="46px"
-                  fontSize={{base: "14px", lg: "24px"}}
+                  maxW="800px"
+                  mx="auto"
+                  fontSize={{ base: "14px", lg: "24px" }}
                   fontWeight="500"
                   textAlign="center"
                 >
