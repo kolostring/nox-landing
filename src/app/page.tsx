@@ -5,6 +5,7 @@ import HowDoWeWorkSection from "./HowDoWeWorkSection";
 import TeamSection from "./TeamSection";
 import WorksSection from "./WorksSection";
 import TestimonialsSection from "./TestimonialsSection";
+import ContactSection from "./Contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TeamSection />
       <WorksSection />
       <TestimonialsSection />
+      <ContactSection />
     </Box>
   );
 }
