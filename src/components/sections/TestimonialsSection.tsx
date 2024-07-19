@@ -22,11 +22,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    console.log(currentTestimonial);
-  }, [currentTestimonial]);
-
+  
   return (
     <Box
       as="section"

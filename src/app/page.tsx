@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
-import HeroSection from "./HeroSection";
-import ServicesSection from "./ServicesSection";
-import HowDoWeWorkSection from "./HowDoWeWorkSection";
-import TeamSection from "./TeamSection";
-import WorksSection from "./WorksSection";
-import TestimonialsSection from "./TestimonialsSection";
-import ContactSection from "./Contact";
+import HeroSection from "../components/sections/HeroSection";
+import ServicesSection from "../components/sections/ServicesSection";
+import HowDoWeWorkSection from "../components/sections/HowDoWeWorkSection";
+import TeamSection from "../components/sections/TeamSection";
+import WorksSection from "../components/sections/WorksSection";
+import TestimonialsSection from "../components/sections/TestimonialsSection";
+import ContactSection from "../components/sections/ContactSection";
 
 export default function Home() {
   return (

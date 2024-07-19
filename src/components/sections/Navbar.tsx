@@ -49,7 +49,7 @@ const socialNetworks = [
 const scrollValueTrigger = 100;
 
 export default function Navbar() {
-  const { scrollPosition, isScrolling } = useScroll(35, 1000);
+  const { scrollPosition } = useScroll(35, 1000);
   const lastScrollRef = useRef<number>(0);
   const visibilityPercent = useRef<number>(100);
 
