@@ -41,12 +41,12 @@ export default function TeamSection() {
 
       <Wrap justify="center" pt="50px">
         {team.map(([name, image, title, role]) => (
-          <WrapItem as={Stack} key={name} mt="50px" alignItems="center" gap="0px" w="250px">
+          <WrapItem as={Stack} key={name} mt="50px" alignItems="center" gap="0px" w={{base: "150px", lg: "250px"}}>
             <Avatar name={name} src={image} h="100px" w="100px" />
-            <Heading as="h3" mt="10px" fontSize="18px" fontWeight="600" lineHeight="28px">
+            <Heading as="h3" mt="10px" maxW={{base: "13ch", lg: "auto"}} fontSize="18px" fontWeight="600" lineHeight="28px" textAlign="center">
               {title + " " + name}
             </Heading>
-            <Text fontSize="15px" lineHeight="28px">{role}</Text>
+            <Text fontSize="15px" lineHeight="28px" textAlign="center">{role}</Text>
           </WrapItem>
         ))}
       </Wrap>
