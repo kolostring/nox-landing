@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import ServicesSection from "./ServicesSection";
 import HowDoWeWorkSection from "./HowDoWeWorkSection";
 import TeamSection from "./TeamSection";
+import WorksSection from "./WorksSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ServicesSection />
       <HowDoWeWorkSection />
       <TeamSection />
+      <WorksSection />
     </Box>
   );
 }
