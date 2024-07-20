@@ -1,25 +1,30 @@
-@keyframes bgHorizontalMovement{
-  from{
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+@keyframes bgHorizontalMovement {
+  from {
     background-position: 0% 0%;
   }
-  to{
+  to {
     background-position: 100% 0%;
   }
 }
 
 @keyframes rotate {
-  from{
+  from {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
-}
-  to{
+  }
+  to {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-}
+  }
 }
