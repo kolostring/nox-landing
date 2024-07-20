@@ -36,7 +36,7 @@ const navLinks = [
   ["Trabajos", "/#works-section"],
   ["Comentarios", "/#testimonials-section"],
   ["Contacto", "/#contact-section"],
-  ["Blog", "#"],
+  ["Blog", "/blog"],
 ];
 
 const socialNetworks = [
