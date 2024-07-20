@@ -69,7 +69,7 @@ export default function HorizontalPost({ post }: HorizontalPostProps) {
             {post.abstract}
           </Text>
 
-          <Flex mt="24px" gap="8px">
+          <Flex mt="24px" gap="8px" flexWrap="wrap">
             {post.tags.map((tag) => (
               <Tag key={tag} rounded="full" bg="#0AC05E1A" color="#0AC05E">
                 {tag}
