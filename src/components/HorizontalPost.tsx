@@ -27,7 +27,7 @@ export default function HorizontalPost({ post }: HorizontalPostProps) {
     <NextJSLink href={`/blog/${post.id}`}>
       <Grid
         as="article"
-        templateColumns="19fr 17fr"
+        templateColumns={{base: "1fr 2fr", lg: "19fr 17fr"}}
         gap="0px 0px"
         justifyContent="start"
       >
@@ -60,7 +60,7 @@ export default function HorizontalPost({ post }: HorizontalPostProps) {
           </Heading>
 
           <Text
-            noOfLines={3}
+            noOfLines={{base: 2, lg: 3}}
             mt="8px"
             fontSize="16px"
             lineHeight="24px"

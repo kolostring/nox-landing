@@ -38,18 +38,16 @@ export default function FeaturedPostsSection() {
 
       <Grid
         pt="32px"
-        minH="434px"
-        templateColumns="1fr 1fr"
-        templateRows="1fr 1fr"
+        templateColumns={{base: "1fr", lg: "1fr 1fr"}}
         gap="32px"
       >
-        <GridItem as={Skeleton} rowSpan={2} isLoaded={!isLoading.current}>
+        <GridItem as={Skeleton} minH="434px" rowSpan={{lg: 2}}  isLoaded={!isLoading.current}>
           <VerticalPost post={data[0]} />
         </GridItem>
-        <GridItem as={Skeleton} isLoaded={!isLoading.current}>
+        <GridItem as={Skeleton} minH="180px" isLoaded={!isLoading.current}>
           <HorizontalPost post={data[1]} />
         </GridItem>
-        <GridItem as={Skeleton} isLoaded={!isLoading.current}>
+        <GridItem as={Skeleton} minH="180px" isLoaded={!isLoading.current}>
           <HorizontalPost post={data[2]} />
         </GridItem>
       </Grid>
