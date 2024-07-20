@@ -10,13 +10,12 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import VerticalPost from "../VerticalPost";
-import HorizontalPost from "../HorizontalPost";
+import PostPreview from "../PostPreview";
 
 export default function FeaturedPostsSection() {
   const [isLargeScreen] = useMediaQuery("(min-width: 992px)", {
     ssr: true,
-    fallback: false,
+    fallback: true,
   });
 
   const [data, setData] = useState<PostInfo[]>([]);
@@ -53,35 +52,22 @@ export default function FeaturedPostsSection() {
         templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         gap="32px"
       >
-        <GridItem
-          as={Skeleton}
-          minH="434px"
-          rowSpan={{ lg: 2 }}
-          isLoaded={!isLoading.current}
-        >
-          <VerticalPost post={data[0]} />
+        <GridItem rowSpan={{ lg: 2 }}>
+          <PostPreview post={data[0]} isLoading={isLoading.current} />
         </GridItem>
-        <GridItem
-          as={Skeleton}
-          minH={{ base: "434px", lg: "180px" }}
-          isLoaded={!isLoading.current}
-        >
-          {isLargeScreen ? (
-            <HorizontalPost post={data[1]} />
-          ) : (
-            <VerticalPost post={data[1]} />
-          )}
+        <GridItem>
+          <PostPreview
+            post={data[1]}
+            isHorizontal={isLargeScreen}
+            isLoading={isLoading.current}
+          />
         </GridItem>
-        <GridItem
-          as={Skeleton}
-          minH={{ base: "434px", lg: "180px" }}
-          isLoaded={!isLoading.current}
-        >
-          {isLargeScreen ? (
-            <HorizontalPost post={data[1]} />
-          ) : (
-            <VerticalPost post={data[2]} />
-          )}
+        <GridItem minH={{ base: "434px", lg: "180px" }}>
+          <PostPreview
+            post={data[2]}
+            isHorizontal={isLargeScreen}
+            isLoading={isLoading.current}
+          />
         </GridItem>
       </Grid>
     </Box>

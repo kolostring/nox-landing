@@ -3,14 +3,13 @@ import getAllPosts from "@/test/mocks/get-posts.mock";
 import { PostInfo } from "@/types/postInfo";
 import { Box, Grid, Heading, Skeleton, useMediaQuery } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import VerticalPost from "../VerticalPost";
-import HorizontalPost from "../HorizontalPost";
 import Pagination from "../Pagination";
+import PostPreview from "../PostPreview";
 
 export default function AllPostsSection() {
   const [isLargeScreen] = useMediaQuery("(min-width: 992px)", {
     ssr: true,
-    fallback: false,
+    fallback: true,
   });
 
   const [data, setData] = useState<PostInfo[]>([...Array(9)]);
@@ -50,18 +49,8 @@ export default function AllPostsSection() {
           lg: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
         }}
       >
-        {data.map((post) => (
-          <Skeleton
-            key=""
-            minH={{ base: "180px", lg: "434px" }}
-            isLoaded={!isLoading.current}
-          >
-            {isLargeScreen ? (
-              <VerticalPost post={post} />
-            ) : (
-              <HorizontalPost post={post} />
-            )}
-          </Skeleton>
+        {data.map((post, index) => (
+          <PostPreview key={index} post={post} isLoading={isLoading.current} isHorizontal={!isLargeScreen} />
         ))}
       </Grid>
 
